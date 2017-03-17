@@ -33,8 +33,6 @@ const ListItem = ({
   rightTitleStyle,
   subtitleContainerStyle,
   badge,
-  badgeContainerStyle,
-  badgeTextStyle,
   label,
   onLongPress,
 }) => {
@@ -165,6 +163,16 @@ ListItem.propTypes = {
   chevronColor: PropTypes.string,
   roundAvatar: PropTypes.bool,
   badge: PropTypes.any,
+  component: PropTypes.any,
+  fontFamily: PropTypes.string,
+  rightTitle: PropTypes.string,
+  rightTitleContainerStyle: View.propTypes.style,
+  rightTitleStyle: View.propTypes.style,
+  subtitleContainerStyle: View.propTypes.style,
+  label: PropTypes.any,
+  onLongPress: PropTypes.func,
+  leftIcon: PropTypes.object,
+  avatarStyle: View.propTypes.style,
 }
 
 styles = StyleSheet.create({

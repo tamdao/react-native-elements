@@ -54,4 +54,4 @@ const Elements = {
   Slider,
 }
 
-module.exports = Elements
+module.exports = Elements // eslint-disable-line no-undef
