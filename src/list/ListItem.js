@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react'
-import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native'
-import Badge from '../badge/badge'
-import Icon from '../icons/Icon'
-import Text from '../text/Text'
-import colors from '../config/colors'
-import fonts from '../config/fonts'
-import normalize from '../helpers/normalizeText'
+import React, { PropTypes } from 'react';
+import { View, StyleSheet, TouchableHighlight, Image, Platform } from 'react-native';
+import Badge from '../badge/badge';
+import Icon from '../icons/Icon';
+import Text from '../text/Text';
+import colors from '../config/colors';
+import fonts from '../config/fonts';
+import normalize from '../helpers/normalizeText';
 
-let styles
+let styles;
 
 const ListItem = ({
   onPress,
@@ -36,12 +36,12 @@ const ListItem = ({
   label,
   onLongPress,
 }) => {
-  let Component = onPress || onLongPress ? TouchableHighlight : View
+  let Component = onPress || onLongPress ? TouchableHighlight : View;
   if (component) {
-    Component = component
+    Component = component;
   }
   if (typeof avatar === 'string') {
-    avatar = {uri: avatar}
+    avatar = {uri: avatar};
   }
   return (
     <Component
@@ -135,8 +135,8 @@ const ListItem = ({
         }
       </View>
     </Component>
-  )
-}
+  );
+};
 
 ListItem.defaultProps = {
   underlayColor: 'white',
@@ -144,7 +144,7 @@ ListItem.defaultProps = {
   rightIcon: {name: 'chevron-right'},
   hideChevron: false,
   roundAvatar: false
-}
+};
 
 ListItem.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
@@ -173,7 +173,7 @@ ListItem.propTypes = {
   onLongPress: PropTypes.func,
   leftIcon: PropTypes.object,
   avatarStyle: View.propTypes.style,
-}
+};
 
 styles = StyleSheet.create({
   avatar: {
@@ -232,6 +232,6 @@ styles = StyleSheet.create({
   },
   chevron: {
   }
-})
+});
 
-export default ListItem
+export default ListItem;

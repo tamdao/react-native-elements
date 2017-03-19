@@ -15,4 +15,4 @@ export default {
     condensed: 'RobotoCondensed-Regular',
     condensedItalic: 'RobotoCondensed-Italic'
   }
-}
+};
