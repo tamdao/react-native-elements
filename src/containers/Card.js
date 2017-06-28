@@ -20,6 +20,7 @@ const Card = props => {
     containerStyle,
     wrapperStyle,
     imageWrapperStyle,
+    overlayImageStyle,
     title,
     titleStyle,
     featuredTitle,
@@ -73,7 +74,7 @@ const Card = props => {
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
             >
-              <View style={styles.overlayContainer}>
+              <View style={[styles.overlayContainer, overlayImageStyle]}>
                 {featuredTitle &&
                   <Text
                     style={[
@@ -109,16 +110,17 @@ Card.propTypes = {
   flexDirection: PropTypes.string,
   containerStyle: View.propTypes.style,
   wrapperStyle: View.propTypes.style,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   titleStyle: NativeText.propTypes.style,
-  featuredTitle: PropTypes.string,
+  featuredTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   featuredTitleStyle: Text.propTypes.style,
-  featuredSubtitle: PropTypes.string,
+  featuredSubtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   featuredSubtitleStyle: Text.propTypes.style,
   dividerStyle: View.propTypes.style,
   image: Image.propTypes.source,
   imageStyle: View.propTypes.style,
   imageWrapperStyle: View.propTypes.style,
+  overlayImageStyle: View.propTypes.style,
   fontFamily: PropTypes.string,
 };
 
